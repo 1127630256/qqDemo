@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <style>
+        body{
+            position: relative;
+            background-image: url("../image/qq/a2.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 721px;
+        }
+        .main{
+            position: absolute;
+            top: 20px;
+            width: 433px;
+            height: 600px;
+            left: 50%;
+            margin-left: -15%;
+            border: solid 1px;
+            border-radius: 1.2%;
+            overflow: hidden;
+        }
+        .main h2{
+            text-align: center;
+            background-image: url("../image/qq/background.png");
+            background-repeat: no-repeat;
+        }
+        form button{
+            position: absolute;
+            left: 40%;
+            margin-left: -8%;
+        }
+        .form-control{
+        !important;
+            opacity:0.79;
+            color: #101212;
+        }
+        .btn-info{
+            width: 151px;
+        }
+    </style>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+</head>
+<body>
+<div class="main">
+    <h2>欢迎注册</h2>
+    <div>
+        <form>
+            <div class="form-group">
+                <input type="text" class="form-control" id="exampleInputName2" placeholder="请输入昵称">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="请输入年龄">
+            </div>
+            <div class="form-group">
+                性别：<select class="form-control" name="">
+                <option value="1">男</option>
+                <option value="2">女</option>
+                <option value="3">外星人</option>
+            </select>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control"  placeholder="请输入真实姓名">
+            </div>
+            <div class="form-group">
+                星座：<select class="form-control">
+                <option value="1">白羊</option>
+                <option value="2">金牛</option>
+                <option value="3">双子</option>
+                <option value="4">巨蟹</option>
+                <option value="5">狮子</option>
+                <option value="6">处女</option>
+                <option value="7">天秤</option>
+                <option value="8">天蝎</option>
+                <option value="9">射手</option>
+                <option value="10">摩羯</option>
+                <option value="11">水瓶</option>
+                <option value="12">双鱼</option>
+            </select>
+            </div>
+            <div class="form-group">
+                血型：<select class="form-control">
+                <option value="1">A</option>
+                <option value="2">B</option>
+                <option value="3">AB</option>
+                <option value="4">O</option>
+                <option value="5">熊猫</option>
+            </select>
+            </div>
+            <button  type="submit" class="btn btn-info">修改</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
