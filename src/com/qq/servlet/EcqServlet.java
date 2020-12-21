@@ -16,15 +16,15 @@ import java.util.Objects;
 
 @WebServlet("/ecq")
 public class EcqServlet extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String name = request.getParameter("name");
         EcqUsersService ecqUsersService = new EcqUserServiceImpl();
         EcqUsers nameAndFace = ecqUsersService.findNameAndFace(name);
         Result result = new Result();
-        if(!(nameAndFace.getNickname().equals(name)) || Objects.isNull(nameAndFace)){
+        if (nameAndFace == null){
             result.setFlag(true);
             result.setErrorMsg("可以注册");
-        } {
+        }else{
             result.setFlag(false);
             result.setErrorMsg("已有该用户，不可以注册");
         }
@@ -34,7 +34,7 @@ public class EcqServlet extends HttpServlet {
         response.getWriter().write(json);
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         this.doPost(request, response);
     }
 }
